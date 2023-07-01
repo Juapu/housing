@@ -23,55 +23,55 @@ const Sidebar = () => {
         <ul>
           <p className="title">MAIN</p>
           <li>
-            <DashboardIcon classname = "icon"/>
+            <DashboardIcon className = "icon"/>
             <span>Dashboard</span>
           </li>
           <p className="title">LISTS</p>
           <li>
-            <PersonOutlineOutlinedIcon classname = "icon"/>
+            <PersonOutlineOutlinedIcon className = "icon"/>
             <span>User</span>
           </li>
           <li>
-            <StoreIcon classname = "icon"/>
+            <StoreIcon className = "icon"/>
             <span>Product</span>
           </li>
           <li>
-            <CreditCardIcon classname = "icon"/>
+            <CreditCardIcon className = "icon"/>
             <span>Orders</span>
           </li>
           <li>
-            <LocalShippingIcon classname = "icon"/>
+            <LocalShippingIcon className = "icon"/>
             <span>Delivery</span>
           </li>
           <p className="title">STATS</p>
           <li>
-            <InsertChartIcon classname = "icon"/>
+            <InsertChartIcon className = "icon"/>
             <span>Stats</span>
           </li>
           <li>
-            <NotificationsNoneIcon classname = "icon"/>
+            <NotificationsNoneIcon className = "icon"/>
             <span>Notifications</span>
           </li>
           <p className="title">SERVICE</p>
           <li>
-            <SettingsSystemDaydreamOutlinedIcon classname = "icon"/>
+            <SettingsSystemDaydreamOutlinedIcon className = "icon"/>
             <span>System Health</span>
           </li>
           <li>
-            <PsychologyOutlinedIcon classname = "icon"/>
+            <PsychologyOutlinedIcon className = "icon"/>
             <span>Logs</span>
           </li>
           <li>
-            <SettingsApplicationsIcon classname = "icon"/>
+            <SettingsApplicationsIcon className = "icon"/>
             <span>Settings</span>
           </li>
           <p className="title">USER</p>
           <li>
-            <AccountCircleOutlinedIcon classname = "icon"/>
+            <AccountCircleOutlinedIcon className = "icon"/>
             <span>Profile</span>
           </li>
           <li>
-            <ExitToAppIcon classname = "icon"/>
+            <ExitToAppIcon className = "icon"/>
             <span>Logout</span>
           </li>
         </ul>
