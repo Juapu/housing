@@ -1,4 +1,5 @@
 import "./chart.scss"
+import { useEffect } from "react";
 import {
     AreaChart,
     Area,
@@ -15,12 +16,32 @@ const data = [
     { name: "May", Total: 900 },
     { name: "June", Total: 1700 },
 ];
-  
-const Chart = () => {
-  return (
+
+
+const Chart = ({aspect, title}) => {
+  useEffect(() => {
+    window.addEventListener('error', e => {
+        if (e.message === 'ResizeObserver loop limit exceeded') {
+            const resizeObserverErrDiv = document.getElementById(
+                'webpack-dev-server-client-overlay-div'
+            );
+            const resizeObserverErr = document.getElementById(
+                'webpack-dev-server-client-overlay'
+            );
+            if (resizeObserverErr) {
+                resizeObserverErr.setAttribute('style', 'display: none');
+            }
+            if (resizeObserverErrDiv) {
+                resizeObserverErrDiv.setAttribute('style', 'display: none');
+            }
+        }
+    });
+  }, []);
+    
+  return (    
     <div className="chart">
-        <div className="title">Last 6 Months (Revenue)</div>
-        <ResponsiveContainer width="100%" aspect={2/1} >
+        <div className="title">{title}</div>
+        <ResponsiveContainer width="100%" aspect={aspect} >
         <AreaChart
           width={730}
           height={250}
