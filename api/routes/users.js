@@ -1,0 +1,10 @@
+import express from "express";
+import {signup, login, updateUser, deleteUser, getUser} from "../controllers/user.js";
+import {auth} from "../middleware/auth.js";
+const router = express.Router();
+router.post("/signup", signup);
+router.post("/login", login);
+router.put("/update-user/:id", auth, updateUser);
+router.delete("/delete-user/:id", auth, deleteUser);
+router.get("/user/:id", auth, getUser);
+export default router;
