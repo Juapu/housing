@@ -6,6 +6,7 @@ import usersRoute from "./routes/users.js"
 import hotelsRoute from "./routes/hotels.js"
 import roomsRoute from "./routes/rooms.js"
 import cookieParser from "cookie-parser"
+import cors from "cors"
 InitiateMongoServer();
 const app = express();
 const PORT = 4000;
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 })
 
 //middlewares
+app.use(cors());
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/hotels", hotelsRoute);
